@@ -7,7 +7,7 @@ NVCC = nvcc
 nbody: nbody.o compute.o
 	$(NVCC) $(FLAGS) $^ -o $@ $(LIBS)
 nbody.o: nbody.c planets.h config.h vector.h $(ALWAYS_REBUILD)
-	$(GCC) $(FLAGS) -c $< -o $@
+	$(NVCC) $(FLAGS) -c $< -o $@
 compute.o: compute.c config.h vector.h $(ALWAYS_REBUILD)
 	$(NVCC) $(FLAGS) -x cu -c $< -o $@
 clean:
