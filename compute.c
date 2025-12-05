@@ -3,6 +3,7 @@
 #include "vector.h"
 #include "config.h"
 #include <cuda_runtime.h>  
+#include "compute.h"
 
 //compute: Updates the positions and locations of the objects in the system based on gravity.
 //Parameters: None
